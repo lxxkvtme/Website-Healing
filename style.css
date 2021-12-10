@@ -1,8 +1,12 @@
 * {
-  background-color: #2e2d2d;
   margin: 0;
   padding: 0;
   font-family: "Bebas";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2e2d2d;
 }
 
 .nav {
@@ -12,6 +16,7 @@
   justify-content: space-evenly;
   z-index: 10;
   left: 0;
+  background-color: #2e2d2d;
 }
 
 .nav ul {
@@ -36,19 +41,106 @@
   height: auto;
 }
 
-.home {
+#body .home {
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-.home img {
+.home img,
+.tengah {
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
+.img-asap {
+  z-index: 6;
+}
+
 .img-focus {
   z-index: 5;
+}
+
+.img-pohondepan {
+  z-index: 4;
+}
+
+.img-pohonbelakang {
+  z-index: 2;
+}
+
+.img-hutan {
+  z-index: 1;
+}
+
+.home .tengah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.home .tengah h1 {
+  font-size: 140pt;
+  z-index: 3;
+  color: #fff;
+  letter-spacing: 65px;
+}
+
+.home .tengah .btn {
+  z-index: 7;
+  margin-top: 14vh;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 15pt;
+  font-family: "montserrat";
+}
+
+#about {
+  height: 100%;
+  width: 100%;
+  padding: 150px 30vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#about .aboutteks {
+  color: #fff;
+}
+
+#about .aboutteks h1 {
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+  font-size: 30pt;
+}
+
+#about .aboutteks p {
+  font-family: "montserrat";
+  line-height: 30px;
+  font-size: 10pt;
+  font-weight: lighter;
+}
+
+#about .aboutimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#about .aboutimg .img-about2 {
+  top: 100vh;
+  right: 0;
+  z-index: 2;
+}
+
+#about .aboutimg .img-about1 {
+  z-index: 3;
+  right: 40vh;
+  top: 145vh;
 }
