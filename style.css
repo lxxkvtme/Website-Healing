@@ -16,7 +16,7 @@ body {
   justify-content: space-evenly;
   z-index: 10;
   left: 0;
-  background-color: #2e2d2d;
+  background: linear-gradient(to bottom, #2e2d2d, transparent);
 }
 
 .nav ul {
@@ -101,46 +101,117 @@ body {
   font-family: "montserrat";
 }
 
+#body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #2e2d2d, transparent);
+  z-index: 9;
+}
+
 #about {
   height: 100%;
   width: 100%;
-  padding: 150px 30vh;
+  padding: 150px 0 150px 20vh;
   display: flex;
   flex-direction: row;
 }
 
 #about .aboutteks {
   color: #fff;
+  width: 65%;
 }
 
 #about .aboutteks h1 {
   letter-spacing: 10px;
   margin-bottom: 50px;
-  font-size: 30pt;
+  font-size: 40pt;
 }
 
 #about .aboutteks p {
   font-family: "montserrat";
-  line-height: 30px;
-  font-size: 10pt;
+  line-height: 35px;
+  font-size: 12pt;
   font-weight: lighter;
 }
 
 #about .aboutimg {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 #about .aboutimg .img-about2 {
-  top: 100vh;
+  position: absolute;
   right: 0;
   z-index: 2;
 }
 
 #about .aboutimg .img-about1 {
+  position: absolute;
   z-index: 3;
   right: 40vh;
-  top: 145vh;
+  top: 25vh;
+}
+
+#travel {
+  height: 100%;
+  width: 100%;
+  padding: 150px 0;
+}
+
+#travel h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15vh;
+  font-size: 40pt;
+  letter-spacing: 10px;
+}
+
+#travel .listcard {
+  padding-left: 20vh;
+  padding-right: 0;
+  width: 100%;
+  display: flex;
+}
+
+#travel .card {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+  margin-right: 50px;
+}
+
+#travel .card h3,
+h5 {
+  font-family: "montserrat";
+}
+
+#travel .card h3 {
+  font-size: 24pt;
+  color: #fff;
+  margin-top: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#travel .card .alamat {
+  display: flex;
+  color: #bdbcbc;
+  margin-top: 25px;
+}
+
+i img {
+  width: 28px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#travel .card .alamat h5 {
+  font-size: 15pt;
+  font-weight: lighter;
+  letter-spacing: 2px;
 }
